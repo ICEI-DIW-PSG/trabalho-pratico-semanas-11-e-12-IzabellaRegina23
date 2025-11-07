@@ -1,18 +1,83 @@
-{
-  "usuarios": [
+[
     {
-      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
-      "login": "admin",
-      "senha": "123",
-      "nome": "Administrador do Sistema",
-      "email": "admin@abc.com"
+        "id": 1,
+        "titulo": "Bonito(MS)",
+        "conteudo": "Famoso por suas águas cristalinas, grutas e cachoeiras, Bonito é um paraíso ecológico no Mato Grosso do Sul, ideal para mergulhos, flutuações em rios e turismo sustentável.",
+        "categoria": "Destinos Nacionais",
+        "atracoes": ["Mergulho no Rio da Prata", "Gruta do Lago Azul", "Cachoeira Boca da Onça", "Buraco das Araras", "Recanto Ecológico Rio da Prata"],
+        "dicas": ["Leve roupas leves e confortáveis;", "Use protetor solar e repelente;", "Reserve passeios com antecedência;", "Respeite a natureza e siga as regras locais;", "Hidrate-se bem durante os passeios."],
+        "imagem": "img/imagem_redimensionada_1.jpg"
+
     },
     {
-      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
-      "login": "user",
-      "senha": "123",
-      "nome": "Usuario Comum",
-      "email": "user@abc.com"
+        "id": 2,
+        "titulo": "Itacaré(BA",
+        "conteudo": "Localizado na Bahia, Itacaré combina praias paradisíacas com mata atlântica preservada. É o destino perfeito para surfistas, aventureiros e quem busca natureza e cultura baiana.",
+        "categoria": "Destinos Nacionais",
+        "atracoes": ["Praia da Concha", "Cachoeira do Tijuípe", "Trilhas Ecológicas", "Praia de Jeribucaçu", "Centro Histórico"],
+        "dicas": ["Explore as praias: Visite as mais famosas — Praia da Concha, Tiririca, Resende, Ribeira e Itacarezinho;", "Pratique surf: Itacaré é um dos melhores destinos de surf no Brasil;", "Faça trilhas: Aproveite as trilhas que levam a cachoeiras e praias isoladas;", "Experimente a culinária local: Prove pratos típicos baianos, como moqueca e acarajé;", "Respeite o meio ambiente: Itacaré é conhecido por sua natureza preservada, então siga as regras locais para proteger o ecossistema."],
+        "imagem": "img/imagem_redimensionada_2.jpg"
+
+    },
+    {
+        "id": 3,
+        "titulo": "New York(US)",
+        "conteudo": "A cidade que nunca dorme! Nova York encanta com seus arranha-céus, museus icônicos, Broadway, Central Park e uma mistura vibrante de culturas do mundo inteiro.",
+        "categoria": "Destinos Internacionais",
+        "atracoes": ["Estátua da Liberdade", "Times Square", "Museu Metropolitano de Arte", "Central Park", "Empire State Building"],
+        "dicas": ["Compre ingressos para atrações com antecedência;", "Use calçados confortáveis para caminhar;", "Explore diferentes bairros da cidade;", "Aproveite a diversidade gastronômica;", "Use o metrô para se locomover."],
+        "imagem": "img/imagem_redimensionada_3.jpg"
+
+
+    },
+    {
+        "id": 4,
+        "titulo": "Cape Town(ZA)",
+        "conteudo": "Entre o oceano e a Montanha da Mesa, Cape Town impressiona com paisagens incríveis, vinícolas renomadas e rica história cultural, sendo uma das cidades mais belas da África.",
+        "categoria": "Destinos Internacionais",
+        "atracoes": ["Montanha da Mesa", "Robben Island", "Cabo da Boa Esperança", "Jardim Botânico Kirstenbosch", "V&A Waterfront"],
+        "dicas": ["Visite durante a primavera ou outono para clima agradável;", "Use protetor solar e chapéu;", "Experimente vinhos locais;", "Respeite a vida selvagem;", "Planeje passeios com antecedência."],
+        "imagem": "img/cape town.jpg"
+
+    },
+    {
+        "id": 5,
+        "titulo": "Maceió(AL)",
+        "conteudo": "Maceió encanta turistas com suas praias paradisíacas, como Pajuçara e Praia do Francês, além de cultura rica e culinária típica nordestina.",
+        "categoria": "Destinos Nacionais",
+        "atracoes": ["Praia de Pajuçara", "Piscinas Naturais", "Feira de Artesanato", "Praia do Gunga", "Catedral Metropolitana"],
+        "dicas": ["Visite as piscinas naturais na maré baixa;", "Experimente a culinária local, como tapioca e sururu;", "Use protetor solar e chapéu;", "Explore as praias próximas, como Praia do Francês", "Respeite o meio ambiente e a cultura local."],
+        "imagem": "img/maceio.jpg"
+
+    },
+    {
+        "id": 6,
+        "titulo": "Agra(IN)",
+        "conteudo": "Berço do majestoso Taj Mahal, Agra é um símbolo do amor eterno e da grandiosidade da arquitetura mogol. Uma parada obrigatória para quem explora o norte da Índia.",
+        "categoria": "Destinos Internacionais",
+        "atracoes": ["Taj Mahal", "Forte de Agra", "Fatehpur Sikri", "Jardins de Mehtab Bagh", "Tumba de Itimad-ud-Daulah"],
+        "dicas": ["Visite o Taj Mahal ao amanhecer para evitar multidões;", "Use roupas leves e confortáveis;", "Leve água e protetor solar;", "Respeite as normas de visitação nos monumentos;", "Explore a culinária local, como o famoso prato Mughlai."],
+        "imagem": "img/india.jpg"
+
+    },
+    {
+        "id": 7,
+        "titulo": "Rio de Janeiro(RJ)",
+        "conteudo": "O Rio de Janeiro é uma das cidades mais icônicas do Brasil, conhecida por suas praias deslumbrantes, o Cristo Redentor e o Pão de Açúcar.",
+        "categoria": "Destinos Nacionais",
+        "atracoes": ["Praia de Copacabana", "Cristo Redentor", "Pão de Açúcar", "Sambódromo", "Maracanã"],
+        "dicas": ["Visite o Cristo Redentor no início da manhã para evitar multidões;", "Experimente a culinária local, como feijoada e caipirinha;", "Use protetor solar e beba muita água, especialmente se estiver visitando as praias;", "Fique atento aos seus pertences em áreas turísticas movimentadas;", "Respeite as normas de segurança, especialmente em áreas turísticas."],
+        "imagem": "img/rio.jpg"
+
+    },
+
+    {
+        "id": 8,
+        "titulo": "Paris(FR)",
+        "conteudo": "Paris, a capital da França, encanta com seus monumentos famosos, ruas elegantes, gastronomia refinada e uma rica vida cultural e artística.",
+        "categoria": "Destinos Internacionais",
+        "atracoes": ["Torre Eiffel", "Museu do Louvre", "Catedral de Notre-Dame", "Champs-Élysées", "Basílica de Sacré-Cœur"],
+        "dicas": ["Explore a pé: Paris é uma cidade linda para caminhar — aproveite os bairros como Le Marais, Montmartre e Saint-Germain-des-Prés;", "Croissant e pain au chocolat nas padarias locais — fuja das grandes redes;", "Use o metrô: O sistema de metrô de Paris é eficiente e cobre a maior parte da cidade;", "Visite museus: Além do Louvre, explore o Musée d'Orsay e o Centre Pompidou;", "Aprenda algumas frases em francês: Os parisienses apreciam quando os visitantes tentam falar sua língua."],
+        "imagem": "img/paris.jpg"
     }
-  ]
-}
+]
