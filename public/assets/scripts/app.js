@@ -1,55 +1,53 @@
-const cardsContainer = document.getElementById('cards-cidades');
-let html = '';
-for (let i = 0; i < dados.length; i++) {
-    html += `
-    <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
-        <a href="detalhes.html?id=${dados[i].id}" class="text-decoration-none w-100">
-            <div class="card h-100 shadow-sm">
-                <img src="${dados[i].imagem}" class="card-img-top" alt="${dados[i].titulo}">
-                <div class="card-body text-center">
-                    <p class="card-text fw-bold">${dados[i].titulo}</p>
-                </div>
+const API_URL = "http://localhost:3000/locais";
+
+// --- Página principal (index.html) ---
+async function carregarCards() {
+  const container = document.getElementById("cards-cidades");
+  if (!container) return;
+
+  try {
+    const response = await fetch(API_URL);
+    const dados = await response.json();
+
+    container.innerHTML = dados.map(local => `
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+        <a href="detalhes.html?id=${local.id}" class="text-decoration-none w-100">
+          <div class="card h-100 shadow-sm">
+            <img src="${local.imagem}" class="card-img-top" alt="${local.titulo}">
+            <div class="card-body text-center">
+              <p class="card-text fw-bold">${local.titulo}</p>
             </div>
+          </div>
         </a>
-    </div>
-    `
+      </div>
+    `).join("");
+  } catch (error) {
+    console.error("Erro ao carregar locais:", error);
+  }
 }
 
+// --- Página de detalhes (detalhes.html) ---
+async function carregarDetalhes() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  if (!id) return;
 
+  try {
+    const response = await fetch(`${API_URL}/${id}`);
+    const local = await response.json();
 
-
-if (cardsContainer)
-    cardsContainer.innerHTML = html;
-
-
-
-const urlParams = new URLSearchParams(window.location.search);
-const id = urlParams.get('id');
-
-
-const tituloElement = document.getElementById('cidade');
-const tituloText = tituloElement.textContent
-
-const descricaoElement = document.getElementById('descricao');
-const descricaoText = descricaoElement.textContent
-
-const imagemElement = document.getElementById('fotocidade');
-const imagemSrc = imagemElement.getAttribute('src');
-
-const atracoesElement = document.getElementById('atracoes');
-const atracoesText = atracoesElement.textContent
-
-const dicasElement = document.getElementById('dicas');
-const dicasText = dicasElement.textContent
-
-for (let i = 0; i < dados.length; i++) {
-    if (dados[i].id == id) {
-        tituloElement.textContent = dados[i].titulo;
-        descricaoElement.textContent = dados[i].conteudo;
-        imagemElement.setAttribute('src', dados[i].imagem);
-        imagemElement.setAttribute('alt', dados[i].titulo);
-        atracoesElement.innerHTML = dados[i].atracoes.join('<br>');
-        dicasElement.innerHTML = dados[i].dicas.join('<br>');
-        break;
-    }
+    document.getElementById("cidade").textContent = local.titulo;
+    document.getElementById("descricao").textContent = local.conteudo;
+    document.getElementById("fotocidade").src = local.imagem;
+    document.getElementById("fotocidade").alt = local.titulo;
+    document.getElementById("atracoes").innerHTML = local.atracoes.map(a => `<li>${a}</li>`).join("");
+    document.getElementById("dicas").innerHTML = local.dicas.map(d => `<li>${d}</li>`).join("");
+  } catch (error) {
+    console.error("Erro ao carregar detalhes:", error);
+  }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (document.getElementById("cards-cidades")) carregarCards();
+  if (document.getElementById("cidade")) carregarDetalhes();
+});

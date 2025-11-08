@@ -1,241 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicas de viagens Izabella</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dicas de Viagens Izabella</title>
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="public/assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-
 <body class="bg-primary bg-opacity-10">
-    <!-- Menu de navegacao -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-opacity-50">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="menu" class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto justify-content-center gap-5">
-                    <li class="nav-item">
-                        <a class="nav-link active text-black border border-dark rounded shadow-md fs-4"
-                            href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black border border-dark rounded shadow-md fs-4" href="#">Destinos
-                            Nacionais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black border border-dark rounded shadow-md fs-4" href="#">Destinos
-                            Internacionais</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black border border-dark rounded shadow-md fs-4" href="#">Cupom
-                            Desconto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black border border-dark rounded shadow-md fs-4" href="#">Dicas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black border border-dark rounded shadow-md fs-4"
-                            href="login.html">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Logo do site -->
-    <div class="text-center my-4 bg-info bg-opacity-25">       
-        <img src="/public/assets/img/logo_site.png" alt="Logo do site" class="img-fluid " style="max-width: 200px;">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary bg-opacity-50">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4">
+          <li class="nav-item"><a class="nav-link active text-black fs-5" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-black fs-5" href="#">Destinos Nacionais</a></li>
+          <li class="nav-item"><a class="nav-link text-black fs-5" href="#">Destinos Internacionais</a></li>
+          <li class="nav-item"><a class="nav-link text-black fs-5" href="#">Dicas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Logo -->
+  <div class="text-center my-4 bg-info bg-opacity-25">
+    <img src="public/assets/img/logo_site.png" alt="Logo do site" class="img-fluid" style="max-width: 200px;">
+  </div>
+
+  <!-- Cards -->
+  <main class="container my-5">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold text-black bg-info bg-opacity-25">Destinos Imperdíveis</h2>
+      <p class="text-secondary">Explore nossos destinos mais populares e planeje sua próxima aventura!</p>
     </div>
 
-    <!-- Carrossel de imagens -->
-    <section class="1">
-        <header id="identidade">
+    <div id="cards-cidades" class="row g-4 justify-content-center">
+      <!-- Cards gerados dinamicamente -->
+    </div>
+  </main>
 
-            <div id="carouselExampleCaptions" class="carousel slide w-50 mx-auto mt-4 mb-5" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <a href="detalhes.html?id=1">
-                            <img src="/public/assets/img/imagem_carrossel_1.jpg" class="d-block w-100 h-100" alt="bonito">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block bg-black bg-opacity-75 p-3 rounded">
-                            <h5 class="text-white fw-bold bg-">Bonito(MS)</h5>
-                            <p>Mergulhe nas águas cristalinas e descubra um paraíso subaquático!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="detalhes.html?id=2">
-                            <img src="/public/assets/img/imagem_carrossel_2.jpg" class="d-block w-100 h-100" alt="itacare">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block bg-black bg-opacity-75 p-3 rounded">
-                            <h5 class="text-white fw-bold bg-">Itacaré(BA)</h5>
-                            <p>Entre o verde da mata e o azul do mar, viva o melhor da Bahia!</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <a href="detalhes.html?id=3">
-                            <img src="/public/assets/img/imagem_carrossel_3.jpg" class="d-block w-100 h-100" alt="ny">
-                        </a>
-                        <div class="carousel-caption d-none d-md-block bg-black bg-opacity-75 p-3 rounded">
-                            <h5 class="text-white fw-bold bg-">Nova York(US)</h5>
-                            <p>A cidade que nunca dorme — onde cada rua conta uma história!</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            </a>
-        </header>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-primary bg-opacity-50 text-center text-black py-4 mt-5">
+    <p>Desenvolvido por Izabella Regina Elias Evangelista | PUC Minas 2025</p>
+  </footer>
 
-    <!-- Cards-->
-    <section class="2">
-        <main>
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="fw-bold text-black bg-info bg-opacity-25">Destinos Imperdíveis</h2>
-                    <p class="text-secondary">Explore nossos destinos mais populares e planeje sua próxima aventura!</p>
-                </div>
-                <div id="cards-cidades" class="row g-4 mt-5">
-                    <!-- Card 1 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm">
-                            <img src="/public/assets/img/imagem_redimensionada_1.jpg" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Bonito(MS)</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm">
-                            <img src="/public/assets/img/imagem_redimensionada_2.jpg" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Itacaré(BA)</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm">
-                            <img src="/public/assets/img/imagem_redimensionada_3.jpg" class="card-img-top" alt="Destino 3">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">New York(US)</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm ">
-                            <img src="/public/assets/img/cape town.jpg" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Cape Town(ZA)</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm">
-                            <img src="/public/assets/img/maceio.jpg" class="card-img-top" alt="Destino 5">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Maceió(AL)</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 6 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm">
-                            <img src="/public/assets/img/india.jpg" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Agra(IN)</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 7 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm">
-                            <img src="/public/assets/img/rio.jpg" class="card-img-top">
-                            <div class="card-body text-center ">
-                                <h5 class="card-title">Rio de Janeiro(RJ)</h5>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 8 -->
-                    <div class="col-12 col-sm-6 col-lg-3 justify-content-center d-flex">
-                        <div class="card w-75 h-100 shadow-sm ">
-                            <img src="/public/assets/img/paris.jpg" class="card-img-top">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Paris(FR)</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </section>
-
-    <!-- Footer com informacoes-->
-    <section class="3">
-        <footer class="bg-primary bg-opacity-50 text-dark py-4 border-top mt-5">
-            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-start">
-                <div class="col-md-8 mb-4 mb-md-0">
-                    <p class="text-black fw-bold mb-2">Sobre</p>
-                    <p class="mb-1">Estudante do 1º período do curso de Análise e Desenvolvimento de Sistemas,</p>
-                    <p class="mb-1">empolgada com as novas descobertas do mundo da tecnologia!</p>
-                </div>
-                <div class="col-md-4 d-flex flex-column align-items-center align-items-md-end text-end">
-                    <img src="/public/assets/img/sobre mim.jpeg" alt="Foto do aluno" class="rounded-circle mb-2"
-                        style="width: 60px; height: 60px; object-fit: cover;">
-                    <p class="mb-0"><strong>Aluno:</strong> Izabella Regina Elias Evangelista</p>
-                    <p class="mb-0"><strong>Curso:</strong> Análise e Desenvolvimento de Sistemas</p>
-                    <p class="mb-2"><strong>Turma:</strong> Noite</p>
-                    <div>
-                        <p class="text-black fw-bold mb-1">Redes Sociais:</p>
-                        <a href="#" class="text-dark me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-dark me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-dark"><i class="bi bi-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </section>
-
-    <!-- Scripts Bootstrap e app.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <script src="/public/assets/scripts/app.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="public/assets/scripts/app.js"></script>
 </body>
-
 </html>
